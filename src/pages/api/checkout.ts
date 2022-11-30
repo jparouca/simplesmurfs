@@ -4,7 +4,7 @@ import { stripe } from "../../lib/stripe";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { priceId } = req.body;
 
-  // Evitar GET direto.
+  // Evitar um GET direto.
   if (req.method != 'POST') {
     return res.status(405).json({error: 'Method not Allowed'})
   }
