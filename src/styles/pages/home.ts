@@ -1,26 +1,32 @@
-import { styled } from "..";
+import { styled } from "../index";
 
 export const HomeContainer = styled('main', {
   display: 'flex',
   width: '100%',
   maxWidth: 'calc(100vw - ((100vw - 1180px) / 2))',
   marginLeft: 'auto',
-  minHeight: 656
+
 })
 
 export const Product = styled('div', {
-  background: 'linear-gradient(180deg, #1ea483 0%, #7465d4 100%)',
-  borderRadius: 8,
+  background: 'linear-gradient(180deg, #1c1917 0%, #312924 100%)',
   cursor: 'pointer',
   position: 'relative',
   overflow: 'hidden',
+
+
+  borderRadius: 8,
+  borderColor: 'white',
+  borderStyle: 'solid',
+  borderWidth: '2px',
 
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
 
   img: {
-    objectFit: 'cover'
+    objectFit: 'cover',
+    opacity: 0.5,
   },
 
   footer: {

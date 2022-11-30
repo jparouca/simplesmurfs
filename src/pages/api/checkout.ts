@@ -4,12 +4,12 @@ import { stripe } from "../../lib/stripe";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { priceId } = req.body;
 
-  //Lidar caso tentem acessar com um GET direto.
+  // Evitar GET direto.
   if (req.method != 'POST') {
     return res.status(405).json({error: 'Method not Allowed'})
   }
 
-  //Lidar com precos vazios.
+  //Nada sai de graca.
    if (!priceId) {
      return res.status(400).json({error: 'Preço não encontrado.'})
    }
